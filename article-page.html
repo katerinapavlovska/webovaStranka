@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="cs">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="styl.css">
+      <script src="https://kit.fontawesome.com/bacb9d541c.js" crossorigin="anonymous"></script>
+      <script src="script/leftNavBar.js"></script>
+      <script src="script/downdrop.js"></script>
+      <script src="script/showSearch.js"></script>
+      <title>Article page</title>
+   </head>
+   <body>
+      <div id="overlay-page"></div>
+      <div id="sidebar-left">
+         <div style="height: 80px; border-bottom: 1px solid #ededed; position: relative;">
+            <img src="pictures/logo.gif" alt="" style="margin: 30px;">
+            <button style="border: none; outline: none; height: 50px; width: 50px; background-color: transparent; position: absolute; left: 80%; top: 15px;" onclick="closeLeftNavBar()">
+            <span class="closebutton">&times;</span></button>
+         </div>
+         <ul class="ul--none">
+            <li><a href="index.html" class="navigation">home</a></li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">Features</button>
+                  <div class="dropdown-content-inside">
+                     <a href="">post style</a>
+                     <a href="">header style</a>
+                     <a href="">footer style</a>
+                     <a href="">content style</a>
+                     <a href="">widgets</a>
+                  </div>
+               </div>
+            </li>
+            <li><a href="post-list.html" class="navigation">post</a></li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">trending</button>
+                  <div class="dropdown-content-inside">
+                     <a href="not-found.html">link 1</a>
+                     <a href="not-found.html">link 2</a>
+                     <a href="not-found.html">link 3</a>
+                     <a href="not-found.html">link 4</a>
+                     <a href="not-found.html">link 5</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">shop</button>
+                  <div class="dropdown-content-inside">
+                     <a href="not-found.html">link 1</a>
+                     <a href="not-found.html">link 2</a>
+                     <a href="not-found.html">link 3</a>
+                     <a href="not-found.html">link 4</a>
+                     <a href="not-found.html">link 5</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">pages</button>
+                  <div class="dropdown-content-inside">
+                     <a href="index.html">index</a>
+                     <a href="article-page.html">article page</a>
+                     <a href="typography.html">typography</a>
+                     <a href="elements.html">elements</a>
+                     <a href="contact-us.html">contact us</a>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <section style="padding: 30px; border-top: 1px solid #ededed; border-bottom: 1px solid #ededed;">
+            <h2>get the newsletter</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            <input type="text" placeholder="Your Email">
+            <button class="button button--black" style="width: 100%;">sing up</button>
+         </section>
+         <section style="display: grid; grid-template-columns: auto auto auto auto auto auto; grid-gap: 15px; margin-left: 30px;">
+            <h1 style="grid-column: 1/span 4; grid-row: 1;">follow us</h1>
+            <!--seznam ikon-->
+            <div class="border-icon" style="grid-column: 2; grid-row: 2;"><a href="https://facebook.com" class="icon fab fa-facebook-f"></a></div>
+            <span class="information-text" style="grid-column: 2; grid-row: 3;">438k</span>
+            <div class="border-icon" style="grid-column: 3; grid-row: 2;"><a href="https://twitter.com" class="icon fab fa-twitter"></a></div>
+            <span class="information-text" style="grid-column: 3; grid-row: 3;">33k</span>
+            <div class="border-icon" style="grid-column: 4; grid-row: 2;"><a href="https://www.instagram.com" class="icon fab fa-instagram"></a></div>
+            <span class="information-text" style="grid-column: 4; grid-row: 3;">393</span>
+            <div class="border-icon" style="grid-column: 5; grid-row: 2;"><a href="https://cz.pinterest.com" class="icon fab fa-pinterest" style="grid-column: 5; grid-row: 2;"></a></div>
+            <span class="information-text" style="grid-column: 5; grid-row: 3;">90k</span>
+            <div class="border-icon" style="grid-column: 6; grid-row: 2;"><a href="https://www.youtube.com" class="icon fab fa-youtube" style="grid-column: 6; grid-row: 2;"></a></div>
+            <span class="information-text" style="grid-column: 6; grid-row: 3;">90k</span>
+         </section>
+      </div>
+      <header>
+         <button class="button-in-navbar" style="background-image:url('pictures/nav-bar-left.png'); border-right: 1px solid #ededed;" onclick="showLeftNavBar()"></button>
+         <img src="pictures/logo.gif" alt="" style="margin: 25px 20px 0px 0px; width: 120px; height: 30px;">
+         <nav class="nav">
+            <ul class="ul-inline--nav" style="margin-top: -2px;">
+               <li><a class="navigation" href="index.html">Home</a></li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdown">Features</button>
+                     <div class="dropdown-content">
+                        <button>Post style</button>
+                        <button>Header style</button>
+                        <button>Footer style</button>
+                        <a href="">Content style</a>
+                        <button>Widgets</button>
+                     </div>
+                  </div>
+               </li>
+               <li><a class="navigation" href="post-list.html">Post</a></li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdown">Trending</button>
+                     <div class="dropdown-content" style="width: 1140px; margin-left: -600px;">
+                        <div style="display: grid; grid-template-columns: 80px auto;">
+                           <div style="grid-column: 1; padding: 30px;">
+                              <a href="" class="navigation navigation--moving">lifestyle</a>
+                              <a href="" class="navigation navigation--moving">travel</a>
+                              <a href="" class="navigation navigation--moving">food</a>
+                              <a href="" class="navigation navigation--moving">finance</a>
+                              <a href="" class="navigation navigation--moving">fashion</a>
+                           </div>
+                           <div style="grid-column: 2; padding: 30px;">
+                              <div class="slideshow-container" style="display: inline-block; float: right;">
+                                 <div class="slide fade" style="display: block;">
+                                    <div class="article-image-top">
+                                       <ul>
+                                          <li><img src="pictures/lifestyle01.jpg" alt="" style=" height: 220px; width: 263px;"></li>
+                                          <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                                          <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                                          <li class="information-text">by andres harrison</li>
+                                          <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                                       </ul>
+                                    </div>
+                                    <div class="article-image-top">
+                                       <ul>
+                                          <li><img src="pictures/food01.jpg" alt="" style="height: 220px; width: 263px;"></li>
+                                          <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                                          <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                                          <li class="information-text">by andres harrison</li>
+                                          <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                                       </ul>
+                                    </div>
+                                    <div class="article-image-top">
+                                       <ul>
+                                          <li><img src="pictures/nature01.jpg" alt="" style="height: 220px; width: 263px;"></li>
+                                          <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                                          <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                                          <li class="information-text">by andres harrison</li>
+                                          <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div style= "text-align: center; width: auto;">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                    <span class="dot" onclick="currentSlide(4)"></span>
+                                    <span class="dot" onclick="currentSlide(5)"></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdow">Shop</button>
+                     <div class="dropdown-content">
+                        <a href="not-found.html">Link 1</a>
+                        <a href="not-found.html">Link 2</a>
+                        <a href="not-found.html" >Link 3</a>
+                        <a href="not-found.html">Link 4</a>
+                        <a href="not-found.html">Link 5</a>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdown">Pages</button>
+                     <div class="dropdown-content">
+                        <a href="index.html">index</a>
+                        <a href="article-page.html">article page</a>
+                        <a href="typography.html" >typography</a>
+                        <a href="elements.html">elements</a>
+                        <a href="contact-us.html">contact us</a>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+         <ul style="margin-top: 20px; margin-left: 50px;">
+            <li class="icon"><a href="https://facebook.com" class="fab fa-facebook-f"></a></li>
+            <li class="icon"><a href="https://twitter.com" class="fab fa-twitter"></a></li>
+            <li class="icon"><a href="https://www.instagram.com" class="fab fa-instagram"></a></li>
+            <li class="icon"><a href="https://cz.pinterest.com" class="fab fa-pinterest"></a></li>
+            <li class="icon"><a href="https://www.youtube.com" class="fab fa-youtube"></a></li>
+         </ul>
+         <button class="button-in-navbar" style="border-left: 1px solid #ededed;" onclick="showSearch()"><i class="fas fa-search"></i></button>
+         <div id="overlay-search">
+            <button style="border: none; outline: none; height: 50px; width: 50px; background-color: transparent; position: absolute; left: 95%; top: 15px;" onclick="closeSearch()">
+            <span class="closebutton">&times;</span></button>
+            <div style="width: 1140px;position: absolute; top: 50%; left:10%;">
+               <input type="text" placeholder="Type and hit enter..." style="width:100%; border: none; border-bottom: 1px solid #0a0a0a;">
+               <span>Type above and press Enter to search. Press Esc to cancel.</span>
+            </div>
+         </div>
+      </header>
+      <main>
+         <div class="main-grid">
+            <div class="main-content">
+               <span class="tag-text">travels</span>
+               <br>
+               <span class="header-text" style="font-size: 30px; line-height: 40px;">How being socially isolated for 10 years has changed me and what I have learned.</span><br><br>
+               <span class="information-text">by andres harrison</span><br>
+               <span class="information-text" style="color: #838383;">april 01, 2020</span>
+               <span class="information-text" style="color: #838383;">32 comment</span>
+               <span class="information-text" style="color: #838383;">4 mins read</span>
+               <span class="information-text" style="color: #838383;">359 views</span><br><br>
+               <img src="pictures/lifestyle01.jpg" alt="" style="width:700px; height: 650px; background-color: black;">
+               <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+                  rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
+                  pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+                  vulputate eleifend tellus. Aenean leo ligula, <span class="span-color"> porttitor eu, consequat </span>
+                  vitae, eleifend ac, enim. Neque porro quisquam est, qui dolorem ipsum quia dolor tetur.
+               </p>
+               <p>Blowing into maximum warp speed, you appeared for an instant to be in two places at once.
+                  We have a saboteur aboard. We know you’re dealing in stolen ore. But I wanna talk
+                  about the assassination attempt on Lieutenant Worf. Could someone survive inside
+                  a transporter buffer for 75 years? Fate. It protects fools, little children, and ships
+                  named “Enterprise.”
+                  <br>
+                  You can’t give orders around here. I’ll alert the crew.
+               </p>
+               <div class="citation">
+                  <div style="position: absolute; top: 35px; left: 15px; z-index: 0;"><i class="fas fa-quote-left" style="color: #f1f1f1; font-size: 80px; line-height: 26px;"></i></div>
+                  <div style="z-index: 2; position: relative;">
+                     <p>I can see the sun, but even if I cannot see the sun, I know that it exists. And
+                        to know that the sun is there ”
+                     </p>
+                     <p class="information-text" style="color: #838383;">--- ali tufan</p>
+                  </div>
+               </div>
+               <p>Before you click away, disappointed that I brought up something as practical
+                  and boring as time management, hear me out. My intent is not to crush your spirits.
+               </p>
+               <h1>where does it come from</h1>
+               <p>There are many variations of passages of Lorem Ipsum available, but the majority
+                  have suffered alteration in some form, by injected humour, or <span class="span--color span--underline">randomised words</span>
+                  which don't look generators on the Internet tend to repeat predefined chunks
+                  as necessary, making this the first true generator on the Internet.
+               </p>
+               <br>
+               <p>It uses a dictionary of over 200 Latin words, combined with a handful
+                  of model sentence structures, to generate Lorem Ipsum which looks
+                  reasonable. The generated Lorem Ipsum is therefore always free from
+                  repetition, injected humour, or non-characteristic words etc.
+               </p>
+               <div style="text-align: center; width: inherit; color: #838383; margin-top: 30px; margin-bottom: 30px;">
+                  <img src="pictures/lifestyle02.jpg" alt="" style="width: 600px; height: 450px; background-color: black; display:block; margin-left: auto; margin-right: auto;">
+                  <span>Various versions have evolved over the years, sometimes by accident</span>
+               </div>
+               <h1>where i can get some?</h1>
+               <p>There are many variations of passages of Lorem Ipsum available, but the
+                  majority have suffered alteration in some form, by injected humour, or
+                  randomised words which don't look generators on the Internet tend to
+                  repeat predefined chunks as necessary, making this the first true
+                  generator on the Internet.
+               </p>
+               <p>When people are given a menu of choices, they rarely ask: </p>
+               <ol>
+                  <li> Loren ipsum dolor sit amet.</li>
+                  <li>Denounce with <span class="span--color span--underline">righteous indignation</span></li>
+                  <li>"Who's single to go on a date?" becomes a menu of faces to swipe on Tinder (instead
+                     of local events with friends, or urba adventures nearby)
+                  </li>
+                  <li> Buxiness it will frequently occur </li>
+               </ol>
+               <p>The challenges and struggles of the hero’s journey exist for a reason: They
+                  help you and your business grow.
+               </p>
+               <h1>why do we use it?</h1>
+               <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined
+                  chunks as necessary, making this the first true generator on the Internet.
+                  It uses a dictionary of over 200 Latin words, combined with a handful
+                  of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+               </p>
+               <div class="text-wrapper-left" style="text-align: center;">
+                  <ul class="ul--none">
+                     <li><img src="pictures/lifestyle03.jpg" alt="" style="width: 358px; height: 450px; background-color: black;"></li>
+                     <li><span style="color: #838383;">Various versions have evolved over</span></li>
+                  </ul>
+               </div>
+               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+                  et quas molestias excepturi sint occaecati cupiditate non
+                  <br><br>
+                  provident,
+                  similique sunt in culpa qui officia deserunt mollitia animi, id est
+                  laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+                  distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
+                  cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+                  omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
+                  autem quibusdam et aut officiis debitis aut rerum necessitatibus
+                  saepe eveniet ut et voluptates<br><br>
+                  repudiandae sint et molestiae non
+                  recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut
+                  aut reiciendis voluptatibus maiores alias consequatur aut perferendis
+                  doloribus asperiores repellat."
+               </p>
+               <h1> what is lorem ipsum?</h1>
+               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type
+                  specimen book.
+               </p>
+               <p> When people are given a menu of choices, they rarely ask:</p>
+               <ul style="line-height: 200%;">
+                  <li><b>Loren ipsum</b> dolor sit amet.</li>
+                  <li>Denounce with <span class="span--color span--underline">righteous indignation</span></li>
+                  <li>"Who's single to go on a date?" becomee a menu of faces to swipe on Tinder (instead
+                     of local events with friends, or urban adventures nearby)
+                  </li>
+                  <li>Business it will <b>frequently occur</b></li>
+               </ul>
+               <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                  adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
+                  et dolore magnam aliquam quaerat voluptatem
+               </p>
+               <button class="button button--tag">fashion</button>
+               <button class="button button--tag">lifestyle</button>
+               <button class="button button--tag">barrio</button>
+               <button class="button button--tag">interior design</button>
+               <button class="button button--whitePink" style="float: right; color: #f13544;"><i class="far fa-heart"></i>40 likes</button>
+               <section style="border-top: 1px solid #ededed; border-bottom: 1px solid #ededed; margin-top: 60px; padding-top: 30px; padding-bottom: 30px;">
+                  <h2>like it? share with your friends! </h2>
+                  <span class="information-text">513</span><span class="information-text" style="color: #838383;">shares</span>
+                  <button class="button button--blue" style="height: 45px;"><i class="icon fab fa-facebook-f" style="color: #ffffff;"></i> facebook</button>
+                  <button class="button button--grey" style="height: 45px;"><i class="icon fab fa-twitter"></i>twitter</button>
+                  <button class="button button--grey" style="height: 45px;"><i class="icon fab fa-pinterest"></i> pinterest</button>
+                  <button class="button button--grey" style="height: 45px; width: 45px;">+</button>
+               </section>
+               <div style="grid-gap: 0px; display: grid; margin-bottom: 60px;">
+                  <img src="pictures/contact.jpg" alt="" style="height:125px; width: 125px;border-radius: 50%; grid-column: 1;">
+                  <ul class="ul--none" style="grid-column: 2;">
+                     <li class="information-text">ali tufan</li>
+                     <li style="color: #5f5f5f;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+                        sequi nesciunt.
+                     </li>
+                     <li>
+                        <ul class="ul-inline--none" style="margin: 0; padding: 0;">
+                           <li class="icon"><a href="https://facebook.com" class="fab fa-facebook-f" style="color: #5f5f5f; margin: 0; padding: 0;"></a></li>
+                           <li class="icon"><a href="https://twitter.com" class="fab fa-twitter" style="color: #5f5f5f; margin: 0; padding: 0;"></a></li>
+                           <li class="icon"><a href="https://www.instagram.com" class="fab fa-instagram" style="color: #5f5f5f; margin: 0; padding: 0;"></a></li>
+                           <li class="icon"><a href="https://cz.pinterest.com" class="fab fa-pinterest" style="color: #5f5f5f; margin: 0; padding: 0;"></a></li>
+                           <li class="icon"><a href="https://www.youtube.com" class="fab fa-youtube" style="color: #5f5f5f; margin: 0; padding: 0;"></a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <form style="width: 100%; height: 250px; border:1px solid #ededed; text-align: center;padding-top: 60px;">
+                  <h2>get the newsletter</h2>
+                  <span>Duis aute irure dolor in reprehenderit in volutpate velit esse cillum.</span><br>
+                  <input type="text" placeholder="Your Email" style="width: 350px; display: inline-block;">
+                  <button class="button button--pink">sing up</button>
+                  <br>
+                  <span style="color: #5f5f5f;"> Don't worry, we don't spam</span>
+               </form>
+               <section>
+                  <h2>you may also like</h2>
+                  <div class="slideshow-container">
+                     <div class="slide fade" style="display: block;">
+                        <div class="article-image-top">
+                           <ul style="max-width: 358px;">
+                              <li><img src="pictures/fashion05.jpg" alt="" style="height: 280px; width: 358px;"></li>
+                              <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                              <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                              <li class="information-text">by andres harrison</li>
+                              <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                           </ul>
+                        </div>
+                        <div class="article-image-top">
+                           <ul style="max-width: 358px;">
+                              <li><img src="pictures/food06.jpg" alt="" style="height: 280px; width: 358px;"></li>
+                              <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                              <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                              <li class="information-text">by andres harrison</li>
+                              <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <br>
+                     <div style= "text-align: center; width: inherit;">
+                        <span class="dot" ></span>
+                        <span class="dot" ></span>
+                        <span class="dot" ></span>
+                        <span class="dot" ></span>
+                        <span class="dot" ></span>
+                     </div>
+                  </div>
+               </section>
+               <section style="border-top: 1px solid #ededed; border-bottom: 1px solid #ededed; padding-top: 30px; padding-bottom: 30px;">
+                  <h2>3 comments </h2>
+                  <div style="grid-gap: 0px; display: grid; margin-bottom: 60px;">
+                     <img src="pictures/contact.jpg" alt="" style="height:125px; width: 125px; border-radius: 50%; grid-column: 1;">
+                     <ul class="ul--none" style="grid-column: 2;">
+                        <li class="information-text">ali tufan <span style="float: right; color: #5f5f5f;">april 23, 2020 at 7:45 am</span> </li>
+                        <li style="color: #5f5f5f;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                           fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+                           sequi nesciunt.
+                        </li>
+                        <li><a href="" class="a--pink"><i class="fas fa-reply"></i>  reply</a></li>
+                     </ul>
+                  </div>
+                  <div style="grid-gap: 0px; display: grid; margin-bottom: 60px;">
+                     <img src="pictures/contact.jpg" alt="" style="height:125px; width: 125px;border-radius: 50%; grid-column: 1;">
+                     <ul class="ul--none" style="grid-column: 2;">
+                        <li class="information-text">anderson boston <span style="float: right; color: #5f5f5f;">april 23, 2020 at 7:45 am</span> </li>
+                        <li style="color: #5f5f5f;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                           fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+                           sequi nesciunt.
+                        </li>
+                        <li><a href="" class="a--pink"><i class="fas fa-reply"></i>  reply</a></li>
+                     </ul>
+                  </div>
+               </section>
+               <form>
+                  <h2>write a comment </h2>
+                  <h4>comment</h4>
+                  <textarea style="height: 180px;"></textarea>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 15px;">
+                     <h4 style="grid-column: 1; grid-row: 1;">name</h4>
+                     <input type="text" value="Ali Tufan" style="grid-column: 1; grid-row: 2;">
+                     <h4 style="grid-column: 2; grid-row: 1;">email</h4>
+                     <input type="text" style="grid-column: 2; grid-row: 2;">
+                     <h4 style="grid-column: 3; grid-row: 1;">website</h4>
+                     <input type="text"  style="grid-column: 3; grid-row: 2;">
+                  </div>
+                  <br>
+                  <label class="input-container">Save my name, email, and website in this browser for the next time I comment.
+                  <input type="checkbox">
+                  <span class="checkbox-checkmark"></span>
+                  </label><br><br>
+                  <button class="button button--black">post comment</button>
+               </form>
+               <div style="display: grid; grid-template-columns: 130px auto auto 130px;">
+                  <a class="button--prev" style="background-color: #f0f0f0; color: #0a0a0a; grid-column: 1; left:0; top: 20px;position:relative;">&#8592;</a>
+                  <ul class="ul--none" style="grid-column: 2; text-align: left;">
+                     <li class="information-text" style="color: #5f5f5f;">previous post</li>
+                     <li>A Photo Journalist's Transformative</li>
+                  </ul>
+                  <ul class="ul--none" style="grid-column:3; text-align: right;">
+                     <li class="information-text" style="color: #5f5f5f; text-align: right; padding:0; margin: 0; clear: right;">previous post</li>
+                     <li>Wardrobe Essentials Chinos</li>
+                  </ul>
+                  <a class="button--next" style="background-color: #f0f0f0; color: #0a0a0a; grid-column: 4; left: 60px;top: 20px;position:relative;">&#8594;</a>
+               </div>
+               <!--konec main-obsah-->
+            </div>
+            <!--<div id="sidebar">-->
+            <!--seznam pro celé menu-->
+            <div class="sidebar">
+               <section style="display: grid; grid-template-columns: auto auto auto auto auto auto; grid-gap: 15px;">
+                  <h1 style="grid-column: 1/span 4; grid-row: 1;">follow us</h1>
+                  <!--seznam ikon-->
+                  <div class="border-icon" style="grid-column: 2; grid-row: 2;"><a href="https://facebook.com" class="icon fab fa-facebook-f"></a></div>
+                  <span class="information-text" style="grid-column: 2; grid-row: 3;">438k</span>
+                  <div class="border-icon" style="grid-column: 3; grid-row: 2;"><a href="https://twitter.com" class="icon fab fa-twitter"></a></div>
+                  <span class="information-text" style="grid-column: 3; grid-row: 3;">33k</span>
+                  <div class="border-icon" style="grid-column: 4; grid-row: 2;"><a href="https://www.instagram.com" class="icon fab fa-instagram"></a></div>
+                  <span class="information-text" style="grid-column: 4; grid-row: 3;">393</span>
+                  <div class="border-icon" style="grid-column: 5; grid-row: 2;"><a href="https://cz.pinterest.com" class="icon fab fa-pinterest" style="grid-column: 5; grid-row: 2;"></a></div>
+                  <span class="information-text" style="grid-column: 5; grid-row: 3;">90k</span>
+                  <div class="border-icon" style="grid-column: 6; grid-row: 2;"><a href="https://www.youtube.com" class="icon fab fa-youtube" style="grid-column: 6; grid-row: 2;"></a></div>
+                  <span class="information-text" style="grid-column: 6; grid-row: 3;">90k</span>
+               </section>
+               <section>
+                  <h1>trending posts</h1>
+                  <ul class="ul--none" style="margin:0; padding: 0;">
+                     <li>
+                        <div class="article-container-smaller">
+                           <div class="image-article-container-smaller">
+                              <div class="number-circle">1</div>
+                              <img src="pictures/lifestyle01.jpg" alt="" style="width: 90px; height: 90px; top: 0; position: relative; margin: 15px;">
+                           </div>
+                           <div class="text-article-container-smaller">
+                              <ul>
+                                 <li class="tag-text">travel</li>
+                                 <li class="header-text">The Ultimate Home Checklist</li>
+                                 <li class="information-text">april 01, 2020</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="article-container-smaller">
+                           <div class="image-article-container-smaller">
+                              <div class="number-circle">2</div>
+                              <img src="pictures/lifestyle02.jpg" alt="" style="width: 90px; height: 90px; top: 0; position: relative; margin: 15px;">
+                           </div>
+                           <div class="text-article-container-smaller">
+                              <ul>
+                                 <li class="tag-text">style</li>
+                                 <li class="header-text">Three Fun Things</li>
+                                 <li class="information-text">april 01, 2020</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="article-container-smaller">
+                           <div class="image-article-container-smaller">
+                              <div class="number-circle">3</div>
+                              <img src="pictures/lifestyle03.jpg" alt="" style="width: 90px; height: 90px; top: 0; position: relative; margin: 15px;">
+                           </div>
+                           <div class="text-article-container-smaller">
+                              <ul>
+                                 <li class="tag-text">fashion</li>
+                                 <li class="header-text">Five Big Fall Books</li>
+                                 <li class="information-text">april 01, 2020</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="article-container-smaller">
+                           <div class="image-article-container-smaller">
+                              <div class="number-circle">4</div>
+                              <img src="pictures/lifestyle04.jpg" alt="" style="width: 90px; height: 90px; top: 0; position: relative; margin: 15px;">
+                           </div>
+                           <div class="text-article-container-smaller">
+                              <ul>
+                                 <li class="tag-text">body</li>
+                                 <li class="header-text">The 9 Real Winners of the Emmys</li>
+                                 <li class="information-text">april 01, 2020</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </section>
+               <section style="display: grid; grid-template-columns: 135px 135px; grid-gap: 15px;">
+                  <h1 style="grid-column: 1 / span 2">instagram widget</h1>
+                  <img src="pictures/nature01.jpg" alt=""  style="width: 135px; height: 120px;grid-column: 1; grid-row: 2;">
+                  <img src="pictures/nature02.jpg" alt="" style="width: 135px; height: 120px; grid-column: 2; grid-row: 2;">
+                  <img src="pictures/nature03.jpg" alt="" style="width: 135px; height: 120px; grid-column: 1; grid-row: 3;">
+                  <img src="pictures/nature04.jpg" alt="" style="width: 135px; height: 120px; grid-column: 2; grid-row: 3;">
+               </section>
+               <section style="width: 289px;">
+                  <h1>most commented</h1>
+                  <div class="article-image-top">
+                     <div class="slideshow-container" style="height: 350px; width: 289px;">
+                        <div class="slide fade" style="margin: 0;z-index: 0;display: block;">
+                           <ul class="ul--none">
+                              <li><img src="pictures/fashion01.jpg" alt="" style="height: 200px; width: 289px"></li>
+                              <li><a class="tag-text">trends</a></li>
+                              <li class="header-text">What 3 years of android development taught me the hard way</li>
+                              <li class="information-text">april 01, 2020 | 48 comments</li>
+                           </ul>
+                        </div>
+                        <div style="text-align:center; position: relative; top: 170px; left: 110px; position: absolute; z-index: 2;">
+                           <span class="dot"></span>
+                           <span class="dot"></span>
+                           <span class="dot"></span>
+                           <span class="dot"></span>
+                           <span class="dot"></span>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <!--konec sidebar-->
+            <!--konec main-grid dole-->
+         </div>
+      </main>
+      <footer>
+         <div style="height: 225px; border-bottom: 1px solid #ececec;">
+            <div style="width: 1140px; margin: auto; display: grid; grid-template-columns: auto auto auto; position: relative;">
+               <div style="grid-column: 1;">
+                  <img src="pictures/mail.png" alt="" style="height: 100px; position: absolute; top: 60px;">
+               </div>
+               <div style="grid-column: 2;">
+                  <section style="height: 224px;">
+                     <h4 style="margin-top: 60px; margin-bottom: 30px;">sing up for our newsletters</h4>
+                     <ul class="ul-inline--none">
+                        <li><input type="email" placeholder="Your Email" style="height: 50px; width: 430px; float: left;">
+                           <button class="button button--black" style="float: left; margin-left: 30px;">sing up</button>
+                        </li>
+                     </ul>
+                  </section>
+               </div>
+               <div style="grid-column: 3;">
+                  <img src="pictures/mail.png" alt="" style="height: 100px; position: absolute; top: 60px; transform: scaleX(-1); transform: rotate(160deg);">
+               </div>
+            </div>
+         </div>
+         <div style="width: 1140px; height: 195px; margin: auto; text-align: center; padding-top: 60px;">
+            <img src="pictures/logo.gif" alt="">
+            <ul class="ul-inline--none" style="margin-top: 33px; margin-left: 50px;">
+               <li class="icon"><a href="https://facebook.com" class="fab fa-facebook-f"><span class="information-text" style="margin-left: 10px;">facebook</span></a></li>
+               <li class="icon"><a href="https://twitter.com" class="fab fa-twitter"><span class="information-text" style="margin-left: 10px;">twitter</span></a></li>
+               <li class="icon"><a href="https://www.instagram.com" class="fab fa-instagram"><span class="information-text" style="margin-left: 10px;">instagram</span></a></li>
+               <li class="icon"><a href="https://cz.pinterest.com" class="fab fa-pinterest"><span class="information-text" style="margin-left: 10px;">pinterest</span></a></li>
+               <li class="icon"><a href="https://www.youtube.com" class="fab fa-youtube"><span class="information-text" style="margin-left: 10px;">youtube</span></a></li>
+            </ul>
+         </div>
+         <div style="width: inherit; background-color: #f4f3f3;">
+            <div style="width: 1140px; height: 70px; margin: auto; display: grid; grid-template-columns: auto auto; background-color: #f4f3f3;">
+               <p style="grid-column: 1; text-align: left;">@2020 - All Right Reserved. Designed and Developed by CreativeLayers</p>
+               <ul class="ul-inline--none" style="grid-column: 2; text-align: right;">
+                  <li><a href="" class="tag-text">about</a></li>
+                  <li><a href="" class="tag-text">help</a></li>
+                  <li><a href="" class="tag-text">terms</a></li>
+                  <li><a href="" class="tag-text">privacy</a></li>
+                  <li><a href="" class="tag-text">contact</a></li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="cs">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="styl.css">
+      <script src="accordion.js"></script>
+      <script src="tabScript.js"></script>
+      <script src="https://kit.fontawesome.com/bacb9d541c.js" crossorigin="anonymous"></script>
+      <script src="script/leftNavBar.js"></script>
+      <script src="script/downdrop.js"></script>
+      <script src="script/showSearch.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <title>Elements</title>
+   </head>
+   <body>
+      <div id="overlay-page"></div>
+      <div id="sidebar-left">
+         <div style="height: 80px; border-bottom: 1px solid #ededed; position: relative;">
+            <img src="pictures/logo.gif" alt="" style="margin: 30px;">
+            <button style="border: none; outline: none; height: 50px; width: 50px; background-color: transparent; position: absolute; left: 80%; top: 15px;" onclick="closeLeftNavBar()">
+            <span class="closebutton">&times;</span></button>
+         </div>
+         <ul class="ul--none">
+            <li><a href="index.html" class="navigation">home</a></li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">Features</button>
+                  <div class="dropdown-content-inside">
+                     <a href="">post style</a>
+                     <a href="">header style</a>
+                     <a href="">footer style</a>
+                     <a href="">content style</a>
+                     <a href="">widgets</a>
+                  </div>
+               </div>
+            </li>
+            <li><a href="post-list.html" class="navigation">post</a></li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">trending</button>
+                  <div class="dropdown-content-inside">
+                     <a href="not-found.html">link 1</a>
+                     <a href="not-found.html">link 2</a>
+                     <a href="not-found.html">link 3</a>
+                     <a href="not-found.html">link 4</a>
+                     <a href="not-found.html">link 5</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">shop</button>
+                  <div class="dropdown-content-inside">
+                     <a href="not-found.html">link 1</a>
+                     <a href="not-found.html">link 2</a>
+                     <a href="not-found.html">link 3</a>
+                     <a href="not-found.html">link 4</a>
+                     <a href="not-found.html">link 5</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">pages</button>
+                  <div class="dropdown-content-inside">
+                     <a href="index.html">index</a>
+                     <a href="article-page.html">article page</a>
+                     <a href="typography.html">typography</a>
+                     <a href="elements.html">elements</a>
+                     <a href="contact-us.html">contact us</a>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <section style="padding: 30px; border-top: 1px solid #ededed; border-bottom: 1px solid #ededed;">
+            <h2>get the newsletter</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            <input type="text" placeholder="Your Email">
+            <button class="button button--black" style="width: 100%;">sing up</button>
+         </section>
+         <section style="display: grid; grid-template-columns: auto auto auto auto auto auto; grid-gap: 15px; margin-left: 30px;">
+            <h1 style="grid-column: 1/span 4; grid-row: 1;">follow us</h1>
+            <!--seznam ikon-->
+            <div class="border-icon" style="grid-column: 2; grid-row: 2;"><a href="https://facebook.com" class="icon fab fa-facebook-f"></a></div>
+            <span class="information-text" style="grid-column: 2; grid-row: 3;">438k</span>
+            <div class="border-icon" style="grid-column: 3; grid-row: 2;"><a href="https://twitter.com" class="icon fab fa-twitter"></a></div>
+            <span class="information-text" style="grid-column: 3; grid-row: 3;">33k</span>
+            <div class="border-icon" style="grid-column: 4; grid-row: 2;"><a href="https://www.instagram.com" class="icon fab fa-instagram"></a></div>
+            <span class="information-text" style="grid-column: 4; grid-row: 3;">393</span>
+            <div class="border-icon" style="grid-column: 5; grid-row: 2;"><a href="https://cz.pinterest.com" class="icon fab fa-pinterest" style="grid-column: 5; grid-row: 2;"></a></div>
+            <span class="information-text" style="grid-column: 5; grid-row: 3;">90k</span>
+            <div class="border-icon" style="grid-column: 6; grid-row: 2;"><a href="https://www.youtube.com" class="icon fab fa-youtube" style="grid-column: 6; grid-row: 2;"></a></div>
+            <span class="information-text" style="grid-column: 6; grid-row: 3;">90k</span>
+         </section>
+      </div>
+      <header>
+         <button class="button-in-navbar" style="background-image:url('pictures/nav-bar-left.png'); border-right: 1px solid #ededed;" onclick="showLeftNavBar()"></button>
+         <img src="pictures/logo.gif" alt="" style="margin: 25px 20px 0px 0px; width: 120px; height: 30px;">
+         <nav class="nav">
+            <ul class="ul-inline--nav" style="margin-top: -2px;">
+               <li><a class="navigation" href="index.html">Home</a></li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdown">Features</button>
+                     <div class="dropdown-content">
+                        <button>Post style</button>
+                        <button>Header style</button>
+                        <button>Footer style</button>
+                        <a href="">Content style</a>
+                        <button>Widgets</button>
+                     </div>
+                  </div>
+               </li>
+               <li><a class="navigation" href="post-list.html">Post</a></li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdown">Trending</button>
+                     <div class="dropdown-content" style="width: 1140px; margin-left: -600px;">
+                        <div style="display: grid; grid-template-columns: 80px auto;">
+                           <div style="grid-column: 1; padding: 30px;">
+                              <a href="" class="navigation navigation--moving">lifestyle</a>
+                              <a href="" class="navigation navigation--moving">travel</a>
+                              <a href="" class="navigation navigation--moving">food</a>
+                              <a href="" class="navigation navigation--moving">finance</a>
+                              <a href="" class="navigation navigation--moving">fashion</a>
+                           </div>
+                           <div style="grid-column: 2; padding: 30px;">
+                              <div class="slideshow-container" style="display: inline-block; float: right;">
+                                 <div class="slide fade" style="display: block;">
+                                    <div class="article-image-top">
+                                       <ul>
+                                          <li><img src="pictures/lifestyle01.jpg" alt="" style=" height: 220px; width: 263px;"></li>
+                                          <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                                          <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                                          <li class="information-text">by andres harrison</li>
+                                          <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                                       </ul>
+                                    </div>
+                                    <div class="article-image-top">
+                                       <ul>
+                                          <li><img src="pictures/food01.jpg" alt="" style="height: 220px; width: 263px;"></li>
+                                          <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                                          <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                                          <li class="information-text">by andres harrison</li>
+                                          <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                                       </ul>
+                                    </div>
+                                    <div class="article-image-top">
+                                       <ul>
+                                          <li><img src="pictures/nature01.jpg" alt="" style="height: 220px; width: 263px;"></li>
+                                          <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                                          <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                                          <li class="information-text">by andres harrison</li>
+                                          <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div style= "text-align: center; width: auto;">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                    <span class="dot" onclick="currentSlide(4)"></span>
+                                    <span class="dot" onclick="currentSlide(5)"></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdow">Shop</button>
+                     <div class="dropdown-content">
+                        <a href="not-found.html">Link 1</a>
+                        <a href="not-found.html">Link 2</a>
+                        <a href="not-found.html" >Link 3</a>
+                        <a href="not-found.html">Link 4</a>
+                        <a href="not-found.html">Link 5</a>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdown">Pages</button>
+                     <div class="dropdown-content">
+                        <a href="index.html">index</a>
+                        <a href="article-page.html">article page</a>
+                        <a href="typography.html" >typography</a>
+                        <a href="elements.html">elements</a>
+                        <a href="contact-us.html">contact us</a>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+         <ul style="margin-top: 20px; margin-left: 50px;">
+            <li class="icon"><a href="https://facebook.com" class="fab fa-facebook-f"></a></li>
+            <li class="icon"><a href="https://twitter.com" class="fab fa-twitter"></a></li>
+            <li class="icon"><a href="https://www.instagram.com" class="fab fa-instagram"></a></li>
+            <li class="icon"><a href="https://cz.pinterest.com" class="fab fa-pinterest"></a></li>
+            <li class="icon"><a href="https://www.youtube.com" class="fab fa-youtube"></a></li>
+         </ul>
+         <button class="button-in-navbar" style="border-left: 1px solid #ededed;" onclick="showSearch()"><i class="fas fa-search"></i></button>
+         <div id="overlay-search">
+            <button style="border: none; outline: none; height: 50px; width: 50px; background-color: transparent; position: absolute; left: 95%; top: 15px;" onclick="closeSearch()">
+            <span class="closebutton">&times;</span></button>
+            <div style="width: 1140px;position: absolute; top: 50%; left:10%;">
+               <input type="text" placeholder="Type and hit enter..." style="width:100%; border: none; border-bottom: 1px solid #0a0a0a;">
+               <span>Type above and press Enter to search. Press Esc to cancel.</span>
+            </div>
+         </div>
+      </header>
+      <div class="tittle-container">
+         <div class="content" style="display: grid;">
+            <span class="text-background" style="grid-column:1;">Elements</span>
+            <span class="tittle" style="grid-column: 1;">Elements</span>
+            <ul class="breadcrumb ul-inline--none" style="grid-column: 2; margin-top: 30px; margin-left: 65%;">
+               <li class="information-text" style="margin:0;"><a href="index.html">Home</a></li>
+               <li class="information-text">Elements</li>
+            </ul>
+         </div>
+      </div>
+      <main style="display: grid; grid-template-columns: 555px 555px; grid-gap: 30px;">
+         <section style="grid-column: 1; grid-row: 1;">
+            <h1>accordins</h1>
+            <button class="accordion">Contray to popular belief, Lorem Ipsum is not simply</button>
+            <div class="accordion-text">
+               <p>Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel
+                  sapien. Nulla accumsan, elit sit amet varius semper, nulla mauris
+                  mollis quam, tempor suscipit diam nulla vel leo. Praesent id justo in
+                  neque elementum ultrices.
+               </p>
+            </div>
+            <button class="accordion">There are many variantions of passages of Lorem</button>
+            <div class="accordion-text">
+               <p>Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel
+                  sapien. Nulla accumsan, elit sit amet varius semper, nulla mauris
+                  mollis quam, tempor suscipit diam nulla vel leo. Praesent id justo in
+                  neque elementum ultrices.
+               </p>
+            </div>
+            <button class="accordion">Model sentence structures, to generate</button>
+            <div class="accordion-text">
+               <p>Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel
+                  sapien. Nulla accumsan, elit sit amet varius semper, nulla mauris
+                  mollis quam, tempor suscipit diam nulla vel leo. Praesent id justo in
+                  neque elementum ultrices.
+               </p>
+            </div>
+            <script>
+               var acc = document.getElementsByClassName("accordion");
+               var i;
+               for (i = 0; i < acc.length; i++) {
+                 acc[i].addEventListener("click", function() {
+                   this.classList.toggle("active");
+                   var panel = this.nextElementSibling;
+                   if (panel.style.display === "block") {
+                     panel.style.display = "none";
+                   } else {
+                     panel.style.display = "block";
+                   }
+                 });
+               }
+            </script>
+         </section>
+         <section style="grid-column: 1; grid-row: 2; ">
+            <h1>table</h1>
+            <table>
+               <tr>
+                  <th>Weight</th>
+                  <td>40 kg</td>
+               </tr>
+               <tr>
+                  <th>Dimensions</th>
+                  <td>15 x 15 x 15 m</td>
+               </tr>
+               <tr>
+                  <th>Length</th>
+                  <td>43</td>
+               </tr>
+               <tr>
+                  <th>Material</th>
+                  <td>Fabric</td>
+               </tr>
+               <tr>
+                  <th>Lining</th>
+                  <td>Polyester</td>
+               </tr>
+            </table>
+         </section>
+         <section style="grid-column: 2; grid-row: 1;">
+            <h1>tabs</h1>
+            <div class="tab">
+               <button class="tablinks" onclick="openTab(event, 'description')">description</button>
+               <button class="tablinks" onclick="openTab(event, 'additionalInformation')">additional information</button>
+               <button class="tablinks" onclick="openTab(event, 'reviews')">reviews(1)</button>
+            </div>
+            <div id="description" class="tabcontent" style="display: block;">
+               <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a
+                  type specimen book. It has survived not only five centuries, but also the
+                  leap into electronic typesetting, remaining essentially unchanged.
+               </p>
+            </div>
+            <div id="additionalInformation" class="tabcontent">
+               <p>Aenean fermentum risus id tortor. Quisque tincidunt scelerisque libero.
+                  In dapibus augue non sapien. In rutrum. Maecenas sollicitudin. Etiam neque.
+                  Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu.
+                  Aliquam erat volutpat. Integer rutrum, orci vestibulum ullamcorper ultricies,
+                  lacus quam ultricies odio, vitae placerat pede sem sit amet enim.
+               </p>
+            </div>
+            <div id="reviews" class="tabcontent">
+               <p>Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
+                  Duis viverra diam non justo. Phasellus et lorem id felis nonummy placerat.
+                  Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus,
+                  vel sagittis velit mauris vel metus.
+               </p>
+            </div>
+         </section>
+         <section style="grid-column: 2; grid-row: 2;">
+            <h1>message boxes</h1>
+            <div class="messagebox alert">
+               <span class="closebutton">&times;</span>
+               Please fill in all the fields required
+            </div>
+            <div class="messagebox succes">
+               <span class="closebutton">&times;</span>
+               You did it, now relax and enjoy it
+            </div>
+            <div class="messagebox warning">
+               <span class="closebutton">&times;</span>
+               Change this and that and try again
+            </div>
+            <div class="messagebox info">
+               <span class="closebutton">&times;</span>
+               Please check the information below
+            </div>
+         </section>
+         <section style="grid-column: 1 / span 2; grid-row: 3;">
+            <h1>buttons</h1>
+            <button class="button button--black">button</button>
+            <button class="button button--white">button</button>
+            <button class="button button--pink">button</button>
+            <button class="button button--whitePink">button</button>
+         </section>
+         <section style="grid-column: 1/ span 2; grid-row: 4;">
+            <h1>forms</h1>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 30px;">
+               <section style="grid-column: 1; grid-row: 1;">
+                  <h2>input</h2>
+                  <input type="text" placeholder="Creative Layers">
+               </section>
+               <section style="height: 300px; grid-column: 1; grid-row: 2;">
+                  <h2>search select boxes</h2>
+                  <div class="custom-select">
+                     <select>
+                        <option value="0">Select:</option>
+                        <option value="1">Banking</option>
+                        <option value="2">Digital&Creative</option>
+                        <option value="3">Retail</option>
+                        <option value="4">Human Resources</option>
+                        <option value="5">Management</option>
+                     </select>
+                  </div>
+               </section>
+               <section style="grid-column: 1; grid-row: 3;">
+                  <h2>textare</h2>
+                  <textarea style="height: 174px;" placeholder="Message"></textarea>
+               </section>
+               <section style="grid-column: 1; grid-row: 4;">
+                  <h2>tooltips</h2>
+                  <div class="tooltip">Top
+                     <span class="tooltiptext tooltiptext--top">Tooltip text</span>
+                  </div>
+                  <div class="tooltip">Bottom
+                     <span class="tooltiptext tooltiptext--bottom">Tooltip text</span>
+                  </div>
+                  <div class="tooltip">Left
+                     <span class="tooltiptext tooltiptext--left">Tooltip text</span>
+                  </div>
+                  <div class="tooltip">Right
+                     <span class="tooltiptext tooltiptext--right">Tooltip text</span>
+                  </div>
+               </section>
+               <section style="grid-column: 2; grid-row: 1;">
+                  <h2>select boxes</h2>
+                  <div class="custom-select">
+                     <select>
+                        <option value="0">Select:</option>
+                        <option value="1">Banking</option>
+                        <option value="2">Digital&Creative</option>
+                        <option value="3">Retail</option>
+                        <option value="4">Human Resources</option>
+                        <option value="5">Management</option>
+                     </select>
+                  </div>
+               </section>
+               <section style="height: 300px; grid-column: 2; grid-row: 2;">
+                  <h2>multiple select boxes</h2>
+                  <div class="custom-select">
+                     <select>
+                        <option value="0">Banking</option>
+                        <option value="2">Digital&Creative</option>
+                        <option value="3">Retail</option>
+                        <option value="4">Human Resources</option>
+                        <option value="5">Management</option>
+                     </select>
+                  </div>
+               </section>
+               <section style="grid-column: 2; grid-row: 3;">
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 15px;">
+                     <div style="grid-column: 1;">
+                        <h2>radiobox</h2>
+                        <label class="input-container">Last Hour
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="input-container">Last 24 Hours
+                        <input type="radio" name="radio">
+                        <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="input-container">Last 7 Days
+                        <input type="radio" name="radio">
+                        <span class="radio-checkmark"></span>
+                        </label>
+                     </div>
+                     <div style="grid-column: 2;">
+                        <h2>checkbox</h2>
+                        <label class="input-container" style="grid-row: 1;">HTML 5
+                        <input type="checkbox" checked="checked">
+                        <span class="checkbox-checkmark"></span>
+                        </label>
+                        <label class="input-container" style="grid-row: 2;">Javascript
+                        <input type="checkbox">
+                        <span class="checkbox-checkmark"></span>
+                        </label>
+                        <label class="input-container" style="grid-row: 3;">PHP
+                        <input type="checkbox">
+                        <span class="checkbox-checkmark"></span>
+                        </label>
+                     </div>
+                     <div style="grid-column: 3;">
+                        <h2>switch</h2>
+                        <div style="display: grid; grid-template-columns: auto auto;">
+                           <label class="switch" style="grid-column: 1; grid-row: 1;">
+                           <input type="checkbox" checked>
+                           <span class="slider slider--round"></span>
+                           </label>
+                           <span style="grid-column: 2; grid-row: 1;">Freelance</span>
+                           <label class="switch" style="grid-column: 1; grid-row: 2;">
+                           <input type="checkbox" checked>
+                           <span class="slider slider--round"></span>
+                           </label>
+                           <span style="grid-column: 2; grid-row: 2;">Part time</span>
+                           <label class="switch" style="grid-column: 1; grid-row: 3;">
+                           <input type="checkbox" checked>
+                           <span class="slider slider--round"></span>
+                           </label>
+                           <span style="grid-column: 2; grid-row: 3;">Full time</span>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </section>
+         <script>
+            var x, i, j, l, ll, selElmnt, a, b, c;
+            /*look for any elements with the class "custom-select":*/
+            x = document.getElementsByClassName("custom-select");
+            l = x.length;
+            for (i = 0; i < l; i++) {
+              selElmnt = x[i].getElementsByTagName("select")[0];
+              ll = selElmnt.length;
+              /*for each element, create a new DIV that will act as the selected item:*/
+              a = document.createElement("DIV");
+              a.setAttribute("class", "select-selected");
+              a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+              x[i].appendChild(a);
+              /*for each element, create a new DIV that will contain the option list:*/
+              b = document.createElement("DIV");
+              b.setAttribute("class", "select-items select-hide");
+              for (j = 1; j < ll; j++) {
+                /*for each option in the original select element,
+                create a new DIV that will act as an option item:*/
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function(e) {
+                    /*when an item is clicked, update the original select box,
+                    and the selected item:*/
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) {
+                      if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        yl = y.length;
+                        for (k = 0; k < yl; k++) {
+                          y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                      }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+              }
+              x[i].appendChild(b);
+              a.addEventListener("click", function(e) {
+                  /*when the select box is clicked, close any other select boxes,
+                  and open/close the current select box:*/
+                  e.stopPropagation();
+                  closeAllSelect(this);
+                  this.nextSibling.classList.toggle("select-hide");
+                  this.classList.toggle("select-arrow-active");
+                });
+            }
+            function closeAllSelect(elmnt) {
+              /*a function that will close all select boxes in the document,
+              except the current select box:*/
+              var x, y, i, xl, yl, arrNo = [];
+              x = document.getElementsByClassName("select-items");
+              y = document.getElementsByClassName("select-selected");
+              xl = x.length;
+              yl = y.length;
+              for (i = 0; i < yl; i++) {
+                if (elmnt == y[i]) {
+                  arrNo.push(i)
+                } else {
+                  y[i].classList.remove("select-arrow-active");
+                }
+              }
+              for (i = 0; i < xl; i++) {
+                if (arrNo.indexOf(i)) {
+                  x[i].classList.add("select-hide");
+                }
+              }
+            }
+            /*if the user clicks anywhere outside the select box,
+            then close all select boxes:*/
+            document.addEventListener("click", closeAllSelect);
+         </script>
+      </main>
+      <footer>
+         <div style="height: 225px; border-bottom: 1px solid #ececec;">
+            <div style="width: 1140px; margin: auto; display: grid; grid-template-columns: auto auto auto; position: relative;">
+               <div style="grid-column: 1;">
+                  <img src="pictures/mail.png" alt="" style="height: 100px; position: absolute; top: 60px;">
+               </div>
+               <div style="grid-column: 2;">
+                  <section style="height: 224px;">
+                     <h4 style="margin-top: 60px; margin-bottom: 30px;">sing up for our newsletters</h4>
+                     <ul class="ul-inline--none">
+                        <li><input type="email" placeholder="Your Email" style="height: 50px; width: 430px; float: left;">
+                           <button class="button button--black" style="float: left; margin-left: 30px;">sing up</button>
+                        </li>
+                     </ul>
+                  </section>
+               </div>
+               <div style="grid-column: 3;">
+                  <img src="pictures/mail.png" alt="" style="height: 100px; position: absolute; top: 60px; transform: scaleX(-1); transform: rotate(160deg);">
+               </div>
+            </div>
+         </div>
+         <div style="width: 1140px; height: 195px;margin: auto; text-align: center; padding-top: 60px;">
+            <img src="pictures/logo.gif" alt="">
+            <ul class="ul-inline--none" style="margin-top: 33px; margin-left: 50px;">
+               <li class="icon"><a href="https://facebook.com" class="fab fa-facebook-f"><span class="information-text" style="margin-left: 10px;">facebook</span></a></li>
+               <li class="icon"><a href="https://twitter.com" class="fab fa-twitter"><span class="information-text" style="margin-left: 10px;">twitter</span></a></li>
+               <li class="icon"><a href="https://www.instagram.com" class="fab fa-instagram"><span class="information-text" style="margin-left: 10px;">instagram</span></a></li>
+               <li class="icon"><a href="https://cz.pinterest.com" class="fab fa-pinterest"><span class="information-text" style="margin-left: 10px;">pinterest</span></a></li>
+               <li class="icon"><a href="https://www.youtube.com" class="fab fa-youtube"><span class="information-text" style="margin-left: 10px;">youtube</span></a></li>
+            </ul>
+         </div>
+         <div style="width: inherit; background-color: #f4f3f3;">
+            <div style="width: 1140px; height: 70px; margin: auto; display: grid; grid-template-columns: auto auto; background-color: #f4f3f3;">
+               <p style="grid-column: 1; text-align: left;">@2020 - All Right Reserved. Designed and Developed by CreativeLayers</p>
+               <ul class="ul-inline--none" style="grid-column: 2; text-align: right;">
+                  <li><a href="" class="tag-text">about</a></li>
+                  <li><a href="" class="tag-text">help</a></li>
+                  <li><a href="" class="tag-text">terms</a></li>
+                  <li><a href="" class="tag-text">privacy</a></li>
+                  <li><a href="" class="tag-text">contact</a></li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>

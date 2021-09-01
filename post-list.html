@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="cs">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="styl.css">
+      <script src="https://kit.fontawesome.com/bacb9d541c.js" crossorigin="anonymous"></script>
+      <script src="script/leftNavBar.js"></script>
+      <script src="script/downdrop.js"></script>
+      <script src="script/showSearch.js"></script>
+      <title>List post</title>
+   </head>
+   <body>
+      <div id="overlay-page"></div>
+      <div id="sidebar-left">
+         <div style="height: 80px; border-bottom: 1px solid #ededed; position: relative;">
+            <img src="pictures/logo.gif" alt="" style="margin: 30px;">
+            <button style="border: none; outline: none; height: 50px; width: 50px; background-color: transparent; position: absolute; left: 80%; top: 15px;" onclick="closeLeftNavBar()">
+            <span class="closebutton">&times;</span></button>
+         </div>
+         <ul class="ul--none">
+            <li><a href="index.html" class="navigation">home</a></li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">Features</button>
+                  <div class="dropdown-content-inside">
+                     <a href="">post style</a>
+                     <a href="">header style</a>
+                     <a href="">footer style</a>
+                     <a href="">content style</a>
+                     <a href="">widgets</a>
+                  </div>
+               </div>
+            </li>
+            <li><a href="post-list.html" class="navigation">post</a></li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">trending</button>
+                  <div class="dropdown-content-inside">
+                     <a href="not-found.html">link 1</a>
+                     <a href="not-found.html">link 2</a>
+                     <a href="not-found.html">link 3</a>
+                     <a href="not-found.html">link 4</a>
+                     <a href="not-found.html">link 5</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">shop</button>
+                  <div class="dropdown-content-inside">
+                     <a href="not-found.html">link 1</a>
+                     <a href="not-found.html">link 2</a>
+                     <a href="not-found.html">link 3</a>
+                     <a href="not-found.html">link 4</a>
+                     <a href="not-found.html">link 5</a>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="dropdown-inside">
+                  <button class="dropdown-inside" onclick="downdrop()">pages</button>
+                  <div class="dropdown-content-inside">
+                     <a href="index.html">index</a>
+                     <a href="article-page.html">article page</a>
+                     <a href="typography.html">typography</a>
+                     <a href="elements.html">elements</a>
+                     <a href="contact-us.html">contact us</a>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <section style="padding: 30px; border-top: 1px solid #ededed; border-bottom: 1px solid #ededed;">
+            <h2>get the newsletter</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            <input type="text" placeholder="Your Email">
+            <button class="button button--black" style="width: 100%;">sing up</button>
+         </section>
+         <section style="display: grid; grid-template-columns: auto auto auto auto auto auto; grid-gap: 15px; margin-left: 30px;">
+            <h1 style="grid-column: 1/span 4; grid-row: 1;">follow us</h1>
+            <!--seznam ikon-->
+            <div class="border-icon" style="grid-column: 2; grid-row: 2;"><a href="https://facebook.com" class="icon fab fa-facebook-f"></a></div>
+            <span class="information-text" style="grid-column: 2; grid-row: 3;">438k</span>
+            <div class="border-icon" style="grid-column: 3; grid-row: 2;"><a href="https://twitter.com" class="icon fab fa-twitter"></a></div>
+            <span class="information-text" style="grid-column: 3; grid-row: 3;">33k</span>
+            <div class="border-icon" style="grid-column: 4; grid-row: 2;"><a href="https://www.instagram.com" class="icon fab fa-instagram"></a></div>
+            <span class="information-text" style="grid-column: 4; grid-row: 3;">393</span>
+            <div class="border-icon" style="grid-column: 5; grid-row: 2;"><a href="https://cz.pinterest.com" class="icon fab fa-pinterest" style="grid-column: 5; grid-row: 2;"></a></div>
+            <span class="information-text" style="grid-column: 5; grid-row: 3;">90k</span>
+            <div class="border-icon" style="grid-column: 6; grid-row: 2;"><a href="https://www.youtube.com" class="icon fab fa-youtube" style="grid-column: 6; grid-row: 2;"></a></div>
+            <span class="information-text" style="grid-column: 6; grid-row: 3;">90k</span>
+         </section>
+      </div>
+      <header>
+         <button class="button-in-navbar" style="background-image:url('pictures/nav-bar-left.png'); border-right: 1px solid #ededed;" onclick="showLeftNavBar()"></button>
+         <img src="pictures/logo.gif" alt="" style="margin: 25px 20px 0px 0px; width: 120px; height: 30px;">
+         <nav class="nav">
+            <ul class="ul-inline--nav" style="margin-top: -2px;">
+               <li><a class="navigation" href="index.html">Home</a></li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdown">Features</button>
+                     <div class="dropdown-content">
+                        <button>Post style</button>
+                        <button>Header style</button>
+                        <button>Footer style</button>
+                        <a href="">Content style</a>
+                        <button>Widgets</button>
+                     </div>
+                  </div>
+               </li>
+               <li><a class="navigation" href="post-list.htm">Post</a></li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdown">Trending</button>
+                     <div class="dropdown-content" style="width: 1140px; margin-left: -600px;">
+                        <div style="display: grid; grid-template-columns: 80px auto;">
+                           <div style="grid-column: 1; padding: 30px;">
+                              <a href="" class="navigation navigation--moving">lifestyle</a>
+                              <a href="" class="navigation navigation--moving">travel</a>
+                              <a href="" class="navigation navigation--moving">food</a>
+                              <a href="" class="navigation navigation--moving">finance</a>
+                              <a href="" class="navigation navigation--moving">fashion</a>
+                           </div>
+                           <div style="grid-column: 2; padding: 30px;">
+                              <div class="slideshow-container" style="display: inline-block; float: right;">
+                                 <div class="slide fade" style="display: block;">
+                                    <div class="article-image-top">
+                                       <ul>
+                                          <li><img src="pictures/lifestyle01.jpg" alt="" style=" height: 220px; width: 263px;"></li>
+                                          <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                                          <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                                          <li class="information-text">by andres harrison</li>
+                                          <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                                       </ul>
+                                    </div>
+                                    <div class="article-image-top">
+                                       <ul>
+                                          <li><img src="pictures/food01.jpg" alt="" style="height: 220px; width: 263px;"></li>
+                                          <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                                          <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                                          <li class="information-text">by andres harrison</li>
+                                          <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                                       </ul>
+                                    </div>
+                                    <div class="article-image-top">
+                                       <ul>
+                                          <li><img src="pictures/nature01.jpg" alt="" style="height: 220px; width: 263px;"></li>
+                                          <li><a href="" class="tag-text">style</a><a href="" class="tag-text">design</a></li>
+                                          <li class="header-text header-text--active">The 10 Most Spectacular Things to Do Banff: A Nature </li>
+                                          <li class="information-text">by andres harrison</li>
+                                          <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div style= "text-align: center; width: auto;">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                    <span class="dot" onclick="currentSlide(4)"></span>
+                                    <span class="dot" onclick="currentSlide(5)"></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdow">Shop</button>
+                     <div class="dropdown-content">
+                        <a href="not-found.html">Link 1</a>
+                        <a href="not-found.html">Link 2</a>
+                        <a href="not-found.html" >Link 3</a>
+                        <a href="not-found.html">Link 4</a>
+                        <a href="not-found.html">Link 5</a>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="dropdown">
+                     <button class="dropdown">Pages</button>
+                     <div class="dropdown-content">
+                        <a href="index.html">index</a>
+                        <a href="article-page.html">article page</a>
+                        <a href="typography.html" >typography</a>
+                        <a href="elements.html">elements</a>
+                        <a href="contact-us.html">contact us</a>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+         <ul style="margin-top: 20px; margin-left: 50px;">
+            <li class="icon"><a href="https://facebook.com" class="fab fa-facebook-f"></a></li>
+            <li class="icon"><a href="https://twitter.com" class="fab fa-twitter"></a></li>
+            <li class="icon"><a href="https://www.instagram.com" class="fab fa-instagram"></a></li>
+            <li class="icon"><a href="https://cz.pinterest.com" class="fab fa-pinterest"></a></li>
+            <li class="icon"><a href="https://www.youtube.com" class="fab fa-youtube"></a></li>
+         </ul>
+         <button class="button-in-navbar" style="border-left: 1px solid #ededed;" onclick="showSearch()"><i class="fas fa-search"></i></button>
+         <div id="overlay-search">
+            <button style="border: none; outline: none; height: 50px; width: 50px; background-color: transparent; position: absolute; left: 95%; top: 15px;" onclick="closeSearch()">
+            <span class="closebutton">&times;</span></button>
+            <div style="width: 1140px;position: absolute; top: 50%; left:10%;">
+               <input type="text" placeholder="Type and hit enter..." style="width:100%; border: none; border-bottom: 1px solid #0a0a0a;">
+               <span>Type above and press Enter to search. Press Esc to cancel.</span>
+            </div>
+         </div>
+      </header>
+      <main>
+         <div class="main-grid">
+            <div class="main-content">
+               <section>
+                  <h1 style="text-align:center; text-transform: none;">List Post Blocks</h1>
+                  <!-- 1.článek -->
+                  <div class="article-container">
+                     <img src="pictures/food01.jpg" class="image-article-container" alt="" style="height: 220px; width: 220px; background-color: black;">
+                     <div class="text-article-container">
+                        <ul>
+                           <li><a class="tag-text">holistic healt</a><a class="tag-text">body</a></li>
+                           <li class="header-text" style="font-size: 22px;">The Miraculous Health Benefits of Autophagy Fasting: How to</li>
+                           <li class="information-text">by andres harrison</li>
+                           <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                        </ul>
+                        <a href="" class="read-more a--pink">read more</a>
+                     </div>
+                  </div>
+                  <!-- 2. článek-->
+                  <div class="article-container">
+                     <img src="pictures/fashion03.jpg" alt="" class="image-article-container" style="height: 220px; width: 220px;">
+                     <div class="text-article-container">
+                        <ul>
+                           <li><a class="tag-text">holistic healt</a><a class="tag-text">body</a></li>
+                           <li class="header-text" style="font-size: 22px;">Solving the Mystery: The 5 Types of Dreams and What</li>
+                           <li class="information-text">by andres harrison</li>
+                           <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                        </ul>
+                        <a href="" class="read-more a--pink">read more</a>
+                     </div>
+                  </div>
+                  <!--3 článek-->
+                  <div class="article-container">
+                     <img src="pictures/fashion01.jpg" alt="" class="image-article-container" style="height: 220px; width: 220px;">
+                     <div class="text-article-container">
+                        <ul>
+                           <li><a class="tag-text">holistic healt</a><a class="tag-text">body</a></li>
+                           <li class="header-text" style="font-size: 22px;">The 3 Keys to a Healthy EssenHabits for Longterm Harmony</li>
+                           <li class="information-text">by andres harrison</li>
+                           <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                        </ul>
+                        <a href="" class="read-more a--pink">read more</a>
+                     </div>
+                  </div>
+                  <!--4. článek -->
+                  <div class="article-container">
+                     <img src="pictures/food04.jpg" alt="" class="image-article-container" style="height: 220px; width: 220px;">
+                     <div class="text-article-container">
+                        <ul>
+                           <li><a class="tag-text">holistic healt</a><a class="tag-text">body</a></li>
+                           <li class="header-text" style="font-size: 22px;">The Miraculous Health Benefits of Autophagy Fasting: How to</li>
+                           <li class="information-text">by andres harrison</li>
+                           <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                        </ul>
+                        <a href="" class="read-more a--pink">read more</a>
+                     </div>
+                  </div>
+                  <!-- 5. článek-->
+                  <div class="article-container">
+                     <img src="pictures/nature05.jpg" alt="" class="image-article-container" style="height: 220px; width: 220px;">
+                     <div class="text-article-container">
+                        <ul>
+                           <li><a class="tag-text">holistic healt</a><a class="tag-text">body</a></li>
+                           <li class="header-text" style="font-size: 22px;">Beyoncé Celebrates With Her Mom at Tina</li>
+                           <li class="information-text">by andres harrison</li>
+                           <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                        </ul>
+                        <a href="" class="read-more a--pink">read more</a>
+                     </div>
+                  </div>
+                  <!-- 7. článek-->
+                  <div class="article-container">
+                     <img src="pictures/food05.jpg" alt="" class="image-article-container" style="height: 220px; width: 220px;">
+                     <div class="text-article-container">
+                        <ul>
+                           <li><a class="tag-text">holistic healt</a><a class="tag-text">body</a></li>
+                           <li class="header-text" style="font-size: 22px;">The 10 Most Spectacular Things to Do Baniff: A Nature</li>
+                           <li class="information-text">by andres harrison</li>
+                           <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                        </ul>
+                        <a href="" class="read-more a--pink">read more</a>
+                     </div>
+                  </div>
+                  <!-- 8. článek -->
+                  <div class="article-container">
+                     <img src="pictures/lifestyle02.jpg" alt="" class="image-article-container" style="height: 220px; width: 220px;">
+                     <div class="text-article-container">
+                        <ul>
+                           <li><a class="tag-text">holistic healt</a><a class="tag-text">body</a></li>
+                           <li class="header-text" style="font-size: 22px;">This Brooklyn Brownstone Was Inspired by the Caribbean</li>
+                           <li class="information-text">by andres harrison</li>
+                           <li><span class="information-text" style="color: #838383;">april 01, 2020</span><span class="information-text" style="color: #838383;">32 comments</span></li>
+                        </ul>
+                        <a href="" class="read-more a--pink">read more</a>
+                     </div>
+                  </div>
+                  <div style="width: inherit; text-align: center">
+                     <div class="pagination">
+                        <a href="#">&larr;</a>
+                        <a href="#">1</a>
+                        <a href="#" class="active">2</a>
+                        <a href="#">4</a>
+                        <a href="#">&rarr;</a>
+                     </div>
+                  </div>
+               </section>
+               <!--konec main-obsah-->
+            </div>
+            <!--<div id="sidebar">-->
+            <!--seznam pro celé menu-->
+            <div class="sidebar">
+               <section style="display: grid; grid-template-columns: auto auto auto auto auto auto; grid-gap: 15px;">
+                  <h1 style="grid-column: 1/span 4; grid-row: 1;">follow us</h1>
+                  <!--seznam ikon-->
+                  <div class="border-icon" style="grid-column: 2; grid-row: 2;"><a href="https://facebook.com" class="icon fab fa-facebook-f"></a></div>
+                  <span class="information-text" style="grid-column: 2; grid-row: 3;">438k</span>
+                  <div class="border-icon" style="grid-column: 3; grid-row: 2;"><a href="https://twitter.com" class="icon fab fa-twitter"></a></div>
+                  <span class="information-text" style="grid-column: 3; grid-row: 3;">33k</span>
+                  <div class="border-icon" style="grid-column: 4; grid-row: 2;"><a href="https://www.instagram.com" class="icon fab fa-instagram"></a></div>
+                  <span class="information-text" style="grid-column: 4; grid-row: 3;">393</span>
+                  <div class="border-icon" style="grid-column: 5; grid-row: 2;"><a href="https://cz.pinterest.com" class="icon fab fa-pinterest" style="grid-column: 5; grid-row: 2;"></a></div>
+                  <span class="information-text" style="grid-column: 5; grid-row: 3;">90k</span>
+                  <div class="border-icon" style="grid-column: 6; grid-row: 2;"><a href="https://www.youtube.com" class="icon fab fa-youtube" style="grid-column: 6; grid-row: 2;"></a></div>
+                  <span class="information-text" style="grid-column: 6; grid-row: 3;">90k</span>
+               </section>
+               <section>
+                  <h1>trending posts</h1>
+                  <ul class="ul--none" style="margin:0; padding: 0;">
+                     <li>
+                        <div class="article-container-smaller">
+                           <div class="image-article-container-smaller">
+                              <div class="number-circle">1</div>
+                              <img src="pictures/food01.jpg" alt="" style="width: 90px; height: 90px; top: 0; position: relative; margin: 15px;">
+                           </div>
+                           <div class="text-article-container-smaller">
+                              <ul>
+                                 <li class="tag-text">travel</li>
+                                 <li class="header-text header-text--active">The Ultimate Home Checklist</li>
+                                 <li class="information-text">april 01, 2020</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="article-container-smaller">
+                           <div class="image-article-container-smaller">
+                              <div class="number-circle">2</div>
+                              <img src="pictures/food02.jpg" alt="" style="width: 90px; height: 90px; top: 0; position: relative; margin: 15px;">
+                           </div>
+                           <div class="text-article-container-smaller">
+                              <ul>
+                                 <li class="tag-text">style</li>
+                                 <li class="header-text header-text--active">Three Fun Things</li>
+                                 <li class="information-text">april 01, 2020</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="article-container-smaller">
+                           <div class="image-article-container-smaller">
+                              <div class="number-circle">3</div>
+                              <img src="pictures/food03.jpg" alt="" style="width: 90px; height: 90px; top: 0; position: relative; margin: 15px;">
+                           </div>
+                           <div class="text-article-container-smaller">
+                              <ul>
+                                 <li class="tag-text">fashion</li>
+                                 <li class="header-text header-text--active">Five Big Fall Books</li>
+                                 <li class="information-text">april 01, 2020</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="article-container-smaller">
+                           <div class="image-article-container-smaller">
+                              <div class="number-circle">4</div>
+                              <img src="pictures/food04.jpg" alt="" style="width: 90px; height: 90px; top: 0; position: relative; margin: 15px;">
+                           </div>
+                           <div class="text-article-container-smaller">
+                              <ul>
+                                 <li class="tag-text">body</li>
+                                 <li class="header-text header-text--active">The 9 Real Winners of the Emmys</li>
+                                 <li class="information-text">april 01, 2020</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </section>
+               <section style="display: grid; grid-template-columns: 135px 135px; grid-gap: 15px;">
+                  <h1 style="grid-column: 1 / span 2">instagram widget</h1>
+                  <img src="pictures/fashion01.jpg" alt="" style="width: 135px; height: 120px; grid-column: 1; grid-row: 2;">
+                  <img src="pictures/fashion02.jpg" alt=""  style="width: 135px; height: 120px; grid-column: 2; grid-row: 2;">
+                  <img src="pictures/fashion03.jpg" alt="" style="width: 135px; height: 120px; grid-column: 1; grid-row: 3;">
+                  <img src="pictures/fashion04.jpg" alt=""  style="width: 135px; height: 120px; grid-column: 2; grid-row: 3;">
+               </section>
+               <section style="width: 289px;">
+                  <h1>most commented</h1>
+                  <div class="article-image-top">
+                     <div class="slideshow-container" style="height: 350px; width: 289px;">
+                        <div class="slide fade" style="margin: 0;z-index: 0; display: block;">
+                           <ul class="ul--none">
+                              <li><img src="pictures/lifestyle01.jpg" alt="" style="height: 200px; width: 289px"></li>
+                              <li><a class="tag-text">trends</a></li>
+                              <li class="header-text header-text--active">What 3 years of android development taught me the hard way</li>
+                              <li class="information-text">april 01, 2020 | 48 comments</li>
+                           </ul>
+                        </div>
+                        <div style="text-align:center; position: relative; top: 170px; left: 110px; position: absolute; z-index: 2;">
+                           <span class="dot"></span>
+                           <span class="dot"></span>
+                           <span class="dot"></span>
+                           <span class="dot"></span>
+                           <span class="dot"></span>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <!--konec sidebar-->
+            <!--konec main-grid dole-->
+         </div>
+      </main>
+      <footer>
+         <div style="height: 225px; border-bottom: 1px solid #ececec;">
+            <div style="width: 1140px; margin: auto; display: grid; grid-template-columns: auto auto auto; position: relative;">
+               <div style="grid-column: 1;">
+                  <img src="pictures/mail.png" alt="" style="height: 100px; position: absolute; top: 60px;">
+               </div>
+               <div style="grid-column: 2;">
+                  <section style="height: 224px;">
+                     <h4 style="margin-top: 60px; margin-bottom: 30px;">sing up for our newsletters</h4>
+                     <ul class="ul-inline--none">
+                        <li><input type="email" placeholder="Your Email" style="height: 50px; width: 430px; float: left;">
+                           <button class="button button--black" style="float: left; margin-left: 30px;">sing up</button>
+                        </li>
+                     </ul>
+                  </section>
+               </div>
+               <div style="grid-column: 3;">
+                  <img src="pictures/mail.png" alt="" style="height: 100px; position: absolute; top: 60px; transform: scaleX(-1); transform: rotate(160deg);">
+               </div>
+            </div>
+         </div>
+         <div style="width: 1140px; height: 195px; margin: auto; text-align: center; padding-top: 60px;">
+            <img src="pictures/logo.gif" alt="">
+            <ul class="ul-inline--none" style="margin-top: 33px; margin-left: 50px;">
+               <li class="icon"><a href="https://facebook.com" class="fab fa-facebook-f"><span class="information-text" style="margin-left: 10px;">facebook</span></a></li>
+               <li class="icon"><a href="https://twitter.com" class="fab fa-twitter"><span class="information-text" style="margin-left: 10px;">twitter</span></a></li>
+               <li class="icon"><a href="https://www.instagram.com" class="fab fa-instagram"><span class="information-text" style="margin-left: 10px;">instagram</span></a></li>
+               <li class="icon"><a href="https://cz.pinterest.com" class="fab fa-pinterest"><span class="information-text" style="margin-left: 10px;">pinterest</span></a></li>
+               <li class="icon"><a href="https://www.youtube.com" class="fab fa-youtube"><span class="information-text" style="margin-left: 10px;">youtube</span></a></li>
+            </ul>
+         </div>
+         <div style="width: inherit; background-color: #f4f3f3;">
+            <div style="width: 1140px; height: 70px; margin: auto; display: grid; grid-template-columns: auto auto; background-color: #f4f3f3;">
+               <p style="grid-column: 1; text-align: left;">@2020 - All Right Reserved. Designed and Developed by CreativeLayers</p>
+               <ul class="ul-inline--none" style="grid-column: 2; text-align: right;">
+                  <li><a href="" class="tag-text">about</a></li>
+                  <li><a href="" class="tag-text">help</a></li>
+                  <li><a href="" class="tag-text">terms</a></li>
+                  <li><a href="" class="tag-text">privacy</a></li>
+                  <li><a href="" class="tag-text">contact</a></li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
